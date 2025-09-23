@@ -6,8 +6,5 @@ patches:
       labelSelector: appname=busybox_app1
     patch: |-
       - op: replace
-        path: /spec/accessModes/0
-        value: ReadWriteMany
-      - op: replace
         path: /spec/storageClassName
         value: ocs-external-storagecluster-ceph-rbd
