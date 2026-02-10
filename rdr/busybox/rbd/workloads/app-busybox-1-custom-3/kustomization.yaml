@@ -1,0 +1,10 @@
+resources:
+- ../../../base
+patches:
+  - target:
+      kind: PersistentVolumeClaim
+      labelSelector: appname=busybox_app1
+    patch: |-
+      - op: replace
+        path: /spec/storageClassName
+        value: custom-rbd-sc-2way-compression
